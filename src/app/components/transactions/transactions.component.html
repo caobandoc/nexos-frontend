@@ -1,0 +1,19 @@
+<table class="table table-striped" *ngIf="transactions">
+    <thead>
+        <tr>
+            <th scope="col">Referencia</th>
+            <th scope="col">valor</th>
+            <th scope="col">creado</th>
+            <th scope="col">estado</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let transaction of transactions">
+            <th scope="row">{{ transaction.referencia }}</th>
+            <td>{{ transaction.valor }}</td>
+            <td>{{ transaction.creado }}</td>
+            <td>{{ transaction.estado }}</td>
+        </tr>
+    </tbody>
+
+</table>
