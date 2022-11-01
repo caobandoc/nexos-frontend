@@ -1,7 +1,11 @@
 <div class="container">
-    <p>numero de tarjeta : {{ myCard.pan }}</p>
-    <p>titular : {{ myCard.titular }}</p>
-    <p>cedula : {{ myCard.cedula }}</p>
-    <p>telefono : {{ myCard.telefono }}</p>
-    <p>estado : {{ myCard.estado }}</p>
+    <div class="card" style="width: 18rem;" [hidden]="myCard.pan == ''">
+        <div class="card-body">
+          <h5 class="card-title">{{ myCard.pan }}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Titular: {{ myCard.titular }}</h6>
+          <p class="card-text">Cedula : {{ myCard.cedula }}</p>
+          <p class="card-text">Telefono : {{ myCard.telefono }}</p>
+          <p class="card-text">Estado : {{ myCard.estado }}</p>
+        </div>
+      </div>
 </div>
